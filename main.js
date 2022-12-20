@@ -21,5 +21,18 @@ function addNewUser(newUser) {
         .catch(error => alert(error.message))
 }
 
+// MÉTODO GET COM PARÂMETROS
+function getUser(id) {
+    axios.get(`${url}/${id}`)
+        .then(response => {
+            userName.innerHTML = response.data.name;
+            userCity.innerHTML = response.data.city;
+            userID.innerHTML = response.data.id;
+            userAvatar.src = response.data.avatar;
+        })
+        .catch(error => userName.innerHTML = error)
+}
+
 // addNewUser(newUser);
 getUsers();
+getUser(1);
