@@ -33,6 +33,19 @@ function getUser(id) {
         .catch(error => userName.innerHTML = error)
 }
 
+const userUpdated = {
+    name: "alcides",
+    avatar: "https://avatars.githubusercontent.com/u/7089?v=4",
+    city:"Lisboa"
+}
+
+function updateUser(id, userUpdated){
+    axios.put(`${url}/${id}`, userUpdated)
+        .then(response => console.log(response))
+        .catch(error => alert(error.message))
+}
+
 // addNewUser(newUser);
+// updateUser(5, userUpdated);
 getUsers();
 getUser(1);
