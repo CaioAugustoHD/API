@@ -33,6 +33,7 @@ function getUser(id) {
         .catch(error => userName.innerHTML = error)
 }
 
+// MÉTODO PUT
 const userUpdated = {
     name: "alcides",
     avatar: "https://avatars.githubusercontent.com/u/7089?v=4",
@@ -45,7 +46,15 @@ function updateUser(id, userUpdated){
         .catch(error => alert(error.message))
 }
 
+//MÉTODO DELETE
+function deleteUser(id){
+    axios.delete(`${url}/${id}`)
+        .then(response => console.log(response))
+        .catch(error => alert(error.message))
+}
+
 // addNewUser(newUser);
 // updateUser(5, userUpdated);
+// deleteUser(1);
 getUsers();
-getUser(1);
+getUser(2);
