@@ -1,6 +1,5 @@
 <h1 align="center">Consumindo API</h1>
-<h4 align="center">Página web de um aplicativo bancário com tema light e dark</h4>
-<h4 align="center">Feito com React.js</h4>
+<h4 align="center">Aplicação que consome API REST utilizando a biblioteca Axios</h4>
 
  &#xa0;
 
